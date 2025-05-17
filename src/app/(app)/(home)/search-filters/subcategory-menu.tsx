@@ -42,7 +42,7 @@ export function SubcategoryMenu({
             <Link
               className="w-full p-4 text-left hover:bg-black flex justify-between hover:text-white font-medium items-center underline"
               key={subcategory.slug}
-              href="/"
+              href={`/${category.slug}/${subcategory.slug}`}
             >
               {subcategory.name}
             </Link>

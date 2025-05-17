@@ -1,3 +1,5 @@
+"use client";
+
 import { ScrollArea } from "@/components/ui/scroll-area";
 import {
   Sheet,
@@ -6,6 +8,7 @@ import {
   SheetTitle,
 } from "@/components/ui/sheet";
 import { ChevronLeft, ChevronRightIcon } from "lucide-react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { CustomCategory } from "./types";
@@ -90,7 +93,13 @@ export function CategoriesSidebar({
               key={category.slug}
               className="justify-between cursor-pointer w-full text-left p-4 hover:bg-black hover:text-white flex items-center text-base font-medium"
             >
-              {category.name}{" "}
+              <Link
+                href={`/${category.slug === "all" ? "/" : ""}`}
+                prefetch
+                className="flex items-center"
+              >
+                {category.name}{" "}
+              </Link>
               {category.subcategories && category.subcategories.length > 0 && (
                 <ChevronRightIcon className="size-4" />
               )}
