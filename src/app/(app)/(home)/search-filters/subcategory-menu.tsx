@@ -1,12 +1,13 @@
 import { Category } from "@/payload-types";
 import Link from "next/link";
+import { CustomCategory } from "./types";
 
 export function SubcategoryMenu({
   isOpen,
   category,
   position,
 }: {
-  category: Category;
+  category: CustomCategory;
   isOpen: boolean;
   position: {
     top: number;
