@@ -3,16 +3,16 @@
 import { Button } from "@/components/ui/button";
 import { useDropdownPosition } from "@/hooks/use-dropdown-position";
 import { cn } from "@/lib/utils";
+import { CategoriesGetManyOutput } from "@/modules/categories/types";
 import { useRef, useState } from "react";
 import { SubcategoryMenu } from "./subcategory-menu";
-import { CustomCategory } from "./types";
 
 export function CategoryDropdown({
   category,
   isActive,
   isNavigationHovered,
 }: {
-  category: CustomCategory;
+  category: CategoriesGetManyOutput[1];
   isActive?: boolean;
   isNavigationHovered?: boolean;
 }) {

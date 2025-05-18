@@ -59,11 +59,7 @@ export function Categories({ data }: { data: CustomCategory[] }) {
 
   return (
     <div className="relative w-full">
-      <CategoriesSidebar
-        data={data}
-        open={isSidebarOpen}
-        onOpenChange={setIsSidebarOpen}
-      />
+      <CategoriesSidebar open={isSidebarOpen} onOpenChange={setIsSidebarOpen} />
 
       <div
         ref={measureRef}
